@@ -41,11 +41,15 @@
                 <div class="space-y-2">
                     <div class="bg-dark/75 space-y-2 rounded-sm p-4">
                         <p class="text-light text-lg font-semibold">Start Date</p>
-                        <p class="text-light/85 text-base font-normal">{{ formatIsoDate(data?.started) }}</p>
+                        <p class="text-light/85 text-base font-normal" v-if="data?.started">
+                            {{ formatIsoDate(data?.started) }}</p>
+                        <p class="text-light/85 text-base font-normal" v-else>N/A</p>
                     </div>
                     <div class="bg-dark/75 space-y-2 rounded-sm p-4">
                         <p class="text-light text-lg font-semibold">End Date</p>
-                        <p class="text-light/85 text-base font-normal">{{ formatIsoDate(data?.ended) }}</p>
+                        <p class="text-light/85 text-base font-normal" v-if="data?.ended">
+                            {{ formatIsoDate(data?.ended) }}</p>
+                        <p class="text-light/85 text-base font-normal" v-else>N/A</p>
                     </div>
                     <div class="bg-dark/75 space-y-2 rounded-sm p-4">
                         <p class="text-light text-lg font-semibold">Studio</p>
@@ -53,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col gap-1" v-if="data?.trailer.length > 0">
+            <div class="flex flex-col gap-1" v-if="data?.trailer">
                 <p class="text-light text-lg font-semibold">Trailer</p>
                 <iframe :src="'https://www.youtube.com/embed/' + data?.trailer" frameborder="0" allowfullscreen
                     class="w-full h-60 lg:w-1/2 lg:h-80 rounded-sm" />
