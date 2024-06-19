@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="'/info/' + data.id" class="relative flex flex-col group gap-2">
+    <NuxtLink :to="(type === 'Anime' ? '/anime/' : '/manga/') + data.id" class="relative flex flex-col group gap-2">
         <img :src="data.cover" :alt="data.title" class="w-full h-full rounded-sm object-cover">
         <div class="bg-gradient-to-t from-dark to-transparent absolute inset-0 group-hover:from-dark/85" />
         <div class="absolute bottom-0 left-0 p-2">
@@ -10,5 +10,5 @@
 </template>
 
 <script lang="ts" setup>
-const { data } = defineProps(["data"]);
+const { data, type } = defineProps(["data", "type"]);
 </script>

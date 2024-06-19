@@ -3,13 +3,13 @@
         <div class="space-y-4 select-none m-4">
             <Section value="Anime List" />
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2">
-                <Card v-for="i in data?.anime" :data="i" />
+                <Card v-for="i in data?.anime" :data="i" type="Anime" />
             </div>
         </div>
         <div class="space-y-4 select-none m-4">
             <Section value="Manga List" />
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2">
-                <Card v-for="i in data?.manga" :data="i" />
+                <Card v-for="i in data?.manga" :data="i" type="Manga" />
             </div>
         </div>
     </div>
