@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-start items-center">
-        <p class="text-dark bg-prime text-xl font-bold rounded-sm uppercase px-2">{{ value }}</p>
+        <p class="text-light text-xl font-bold rounded-sm uppercase">{{ value }}</p>
     </div>
 </template>
 
