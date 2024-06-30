@@ -18,5 +18,5 @@
 const runtimeConfig = useRuntimeConfig();
 const pocketbase = usePocketbase(runtimeConfig.public.NUXT_PUBLIC_POCKETBASE_URL);
 const { data, refresh } = await useAsyncData(async () => await pocketbase.collection("anidb")
-    .getList(Number(useRoute().query.page), 32));
+    .getList(Number(useRoute().query.page), 24));
 </script>
